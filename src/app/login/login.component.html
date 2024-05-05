@@ -1,0 +1,24 @@
+
+<div class="vid-container">
+  <!-- <video autoplay muted loop id="Video1" style="width:2000px;" >
+    <source src="../../assets/PIBackground.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video> -->
+<img class="image" src="../../assets/bgApp.jpg" alt="img">
+
+  <div class="inner-container">
+    <form #addform="ngForm" (ngSubmit)="login(addform)" >
+    <div class="box">
+      <h1>Login</h1>
+      <input ngModel name="email" type="text" placeholder="Nom d'utilisateur"/>
+      <input ngModel name="password" type="password" placeholder="Mot de passe"/>
+
+      <button type="submit">Connexion</button>
+      <p>Pas encore membre ? <span class="signup">S'inscrire</span></p>
+    </div>
+    </form>
+  </div>
+
+</div>
+
+

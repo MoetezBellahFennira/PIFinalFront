@@ -1,0 +1,63 @@
+/* Transforming SCSS to CSS */
+/* Style de base pour les liens */
+a {
+    text-decoration: none; /* Pour supprimer le soulignement par défaut */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Police en gras */
+    margin-right: 20px; /* Espacement entre les liens */
+  }
+  
+  /* Style lorsque le curseur survole le lien */
+  a:hover {
+    color: #00aaff; /* Changement de couleur au survol */
+  }
+  
+ 
+  
+/* mat-toolbar styles */
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #e9e6e6; /* Added background color */
+}
+
+/* ul styles */
+
+
+ul li {
+    list-style: none;
+}
+
+/* button styles */
+button {
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+/* .user class styles */
+.user {
+    font-size: 14px;
+}
+
+/* .user-image class styles */
+.user-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* .user-image-icon styles */
+.user-image-icon {
+    height: 18px;
+    font-size: 16px;
+}
+
+/* Styles within ::ng-deep */
+/* Note: ::ng-deep is deprecated, and its use is discouraged */
+/* These styles affect elements inside Angular components */
+
+.mat-menu-content {
+    width: 10px;
+}

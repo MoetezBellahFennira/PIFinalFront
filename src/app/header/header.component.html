@@ -1,0 +1,41 @@
+<mat-toolbar>
+    <mat-toolbar-row class="justify-content-between">
+      
+      <a routerLink="/homeCoach" *ngIf="roleType==='Coach'"><mat-icon >dashboard </mat-icon>dashbordCoach</a>
+      <a routerLink="/homeDirecteur" *ngIf="roleType==='Directeur'"><mat-icon style="margin-right: 15px;">dashboard </mat-icon>dashbord Directeur</a>
+      <a routerLink="/homeMedical" *ngIf="roleType==='StaffMedical'"><mat-icon style="margin-right: 15px;">dashboard </mat-icon>dashbord preparateur Medical</a>
+      <a routerLink="/homeprepphysique" *ngIf="roleType==='StaffPhysique'"><mat-icon >dashboard </mat-icon>dashbord Preparateur physique</a>
+
+      
+      <a routerLink="/homeCoach/MlCoach" *ngIf="roleType=='Coach'" ><mat-icon style="margin-left: 15px;">code</mat-icon>Ml Coach</a>
+      <a routerLink="/homeDirecteur/MlDirecteur"*ngIf="roleType=='Directeur'" ><mat-icon style="margin-left: 15px;">code</mat-icon>Ml Directeur</a>
+      <a routerLink="/homeMedical/MlMedical"*ngIf="roleType=='StaffMedical'" ><mat-icon style="margin-left: 15px;">code</mat-icon>Ml preparateur Medical</a>
+      <a routerLink="/homeprepphysique/MlPrephysique" *ngIf="roleType=='StaffPhysique'"><mat-icon >code</mat-icon>Ml Preparateur physique</a>
+
+      <!-- <a routerLink="/login" ><mat-icon style="margin-left: 15px;">code</mat-icon>login</a> -->
+
+      <div class="row mr-2 ml-auto">
+        <ul class="row m-0 align-items-center">
+          <li>
+            <button
+              mat-button
+              [matMenuTriggerFor]="menu"
+              class="user mt-2 d-flex align-items-center"
+              >
+              <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+  
+              User Name
+              <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon >
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="logout()">
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+              </button>
+            </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
